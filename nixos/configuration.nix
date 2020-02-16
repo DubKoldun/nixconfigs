@@ -49,10 +49,10 @@
         /* tapping = true; */
       };
 
-      /* displayManager.sddm.enable = true; */
-      /* desktopManager.gnome3.enable = true; */
-      displayManager.lightdm.enable = true;
-      windowManager.awesome.enable = true;
+      displayManager.sddm.enable = true;
+      desktopManager.gnome3.enable = true;
+      /* displayManager.lightdm.enable = true; */
+      /* windowManager.awesome.enable = true; */
       /* desktopManager.lumina.enable = true; */
       layout = "us,ru";
 
