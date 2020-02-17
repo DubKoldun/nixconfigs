@@ -11,6 +11,9 @@
       ./users.nix
     ];
 
+
+    /* ; */
+
   # Use the systemd-boot EFI boot loader.
   boot = {
     loader = {
@@ -18,7 +21,16 @@
       efi.canTouchEfiVariables = true;
     };
     plymouth.enable = true;
+
+    /* textraModulePackages = with config.boot.kernelPackages; [ rtl8812au ]; */
+    kernelModules = [ "8812au" "kvm-intel" ];
   };
+
+
+  environment.variables = {
+        MESA_LOADER_DRIVER_OVERRIDE = "iris";
+  };
+
 
   hardware = {
     enableAllFirmware = true;
@@ -29,7 +41,26 @@
       support32Bit = true;
     };
 
-    opengl.driSupport32Bit = true;
+    cpu = {
+      intel.updateMicrocode = true;
+    };
+
+    opengl = {
+      enable = true;
+
+      package = (pkgs.mesa.override {
+        galliumDrivers = [ "nouveau" "iris" "virgl" "swrast" ]; # "virgl" "swrast"
+      }).drivers;
+
+      extraPackages = with pkgs; [
+        vaapiIntel
+        vaapiVdpau
+        libvdpau-va-gl
+        intel-media-driver # only available starting nixos-19.03 or the current nixos-unstable
+      ];
+      driSupport = true;
+      driSupport32Bit = true;
+    };
   };
 
   system = {
@@ -44,6 +75,8 @@
     xserver = {
       enable = true;
 
+      /* videoDrivers = " intel "; */
+
       libinput = {
         enable = true;
         clickMethod = "buttonareas";
@@ -51,7 +84,10 @@
         /* tapping = true; */
       };
 
-      displayManager.sddm.enable = true;
+      displayManager.sddm = {
+        enable = true;
+        theme = "sugar-dark";
+      };
 
       desktopManager = {
          xfce = {
@@ -87,19 +123,17 @@
   };
 
   networking.networkmanager.enable = true;
+
+  /* nixpkgs.config.packageOverrides = pkgs: {
+
+  }; */
   nixpkgs = {
       config = {
-
           allowUnfree = true;
 
-          /* firefox = {
-            enableGoogleTalkPlugin = true;
-            enableAdobeFlash = true;
-          }; */
-
-          /* chromium = {
-           enablePepperFlash = true; # Chromium removed support for Mozilla (NPAPI) plugins so Adobe Flash no longer works
-          }; */
+          packageOverrides = pkgs : {
+            vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
+          };
 
       };
   };
@@ -179,6 +213,6 @@
   # compatible, in order to avoid breaking some software such as database
   # servers. You should change this only after NixOS release notes say you
   # should.
-  # system.stateVersion = "19.09"; # Did you read the comment?
+  # system.stateVersion = "19.09"; # Did you read the comment? YES!
 
 }

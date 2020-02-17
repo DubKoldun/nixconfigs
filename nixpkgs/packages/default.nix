@@ -40,7 +40,7 @@ with pkgs; {
     /* haskell */    (ghc.withPackages (ps: with ps; [ stack unordered-containers ]))
     /* python */     (python3.withPackages (ps: with ps; [ virtualenv pip ]))
     /* python2 */    (python2.withPackages (ps: with ps; [ pip ]))
-    # /* javascript */ nodejs yarn
+    /* javascript */ nodejs yarn
 
     # terminal env
     kitty
@@ -66,7 +66,7 @@ with pkgs; {
     unzip # zip format extraction
     unrar # utility for rar archives
 
-    # graphics environment related
+    /* graphics environment related */
     # inotify-tools # notifier
 
     # media
