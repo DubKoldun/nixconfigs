@@ -5,7 +5,7 @@
     ./udiskie
     ./sxhkd       # hotkeys
     /* ./dunst */
-    /* ./compton */
+    ./compton
     /* ./polybar */
     /* ./i3lock-fancy */
     ./background

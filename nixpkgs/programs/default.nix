@@ -5,6 +5,8 @@
     ./bat
     ./most
     ./fzf
+    /* ./rofi */
+    /* ./networkmanager-dmenu */
     ./zsh
   ];
 }
