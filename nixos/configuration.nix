@@ -39,6 +39,8 @@
 
 
   services = {
+    blueman.enable = true;
+
     xserver = {
       enable = true;
 
@@ -50,11 +52,20 @@
       };
 
       displayManager.sddm.enable = true;
-      desktopManager.gnome3.enable = true;
-      /* displayManager.lightdm.enable = true; */
-      /* windowManager.awesome.enable = true; */
-      /* desktopManager.lumina.enable = true; */
+
+      desktopManager = {
+         xfce = {
+           enable = true;
+           /* noDesktop = truew; */
+           /* enableXfwm = false; */
+         };
+      };
+
+      windowManager.awesome = {
+        enable = true;
+      };
       layout = "us,ru";
+      xkbOptions = "grp:ctrl_alt_toggle";
 
     };
   };

@@ -70,6 +70,8 @@ with pkgs; {
     # inotify-tools # notifier
 
     # media
+    gimp
+
     # mpv          # a media player
     pulseeffects # limiter, compressor, reverberation, equalizer and auto volume effects
     playerctl    # controlling media players

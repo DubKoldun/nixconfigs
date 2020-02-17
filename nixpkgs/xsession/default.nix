@@ -2,7 +2,7 @@
 
 let theme = import ../theme { inherit pkgs; };
 in {
-  imports = [ ./mime.nix ];
+  imports = [ /*./i3*/ ./mime.nix ];
   /* xsession.enable = true; */
   xresources.extraConfig = theme.xresources;
 }

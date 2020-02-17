@@ -8,7 +8,7 @@
       isNormalUser = true;
       extraGroups =
         [ "wheel" "networkmanager" "audio" "video" "input" ];
-      description = "Vitalya loh";
+      description = "Ma boy";
     };
   };
 }
