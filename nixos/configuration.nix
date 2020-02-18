@@ -11,7 +11,6 @@
       ./users.nix
     ];
 
-
     /* ; */
 
   # Use the systemd-boot EFI boot loader.
@@ -23,14 +22,15 @@
     plymouth.enable = true;
 
     /* textraModulePackages = with config.boot.kernelPackages; [ rtl8812au ]; */
-    kernelModules = [ "8812au" "kvm-intel" ];
+    /* kernelModules = [ "kvm-intel" ]; */
+    /* kernelParams = [ "nomodoset" ]; */
   };
 
-
+/*
   environment.variables = {
         MESA_LOADER_DRIVER_OVERRIDE = "iris";
   };
-
+ */
 
   hardware = {
     enableAllFirmware = true;
@@ -48,16 +48,17 @@
     opengl = {
       enable = true;
 
-      package = (pkgs.mesa.override {
+      /* package = (pkgs.mesa.override {
         galliumDrivers = [ "nouveau" "iris" "virgl" "swrast" ]; # "virgl" "swrast"
-      }).drivers;
+      }).drivers; */
 
-      extraPackages = with pkgs; [
-        vaapiIntel
+      /* extraPackages = with pkgs; [ */
+        /* rocm-opencl-icd */
+        /* vaapiIntel
         vaapiVdpau
         libvdpau-va-gl
         intel-media-driver # only available starting nixos-19.03 or the current nixos-unstable
-      ];
+      ]; */
       driSupport = true;
       driSupport32Bit = true;
     };
@@ -75,24 +76,28 @@
     xserver = {
       enable = true;
 
-      /* videoDrivers = " intel "; */
+      videoDrivers = [ "modesetting" "intel" ];
+      deviceSection = ''
+        Option "DRI" "3"
+        Option "TearFree" "true"
+      '';
+      /* useGlamor = true; */
 
       libinput = {
         enable = true;
         clickMethod = "buttonareas";
         naturalScrolling = false;
-        /* tapping = true; */
       };
 
       displayManager.sddm = {
         enable = true;
-        theme = "sugar-dark";
+        /* theme = "sugar-dark"; */
       };
 
       desktopManager = {
          xfce = {
            enable = true;
-           /* noDesktop = truew; */
+           /* noDesktop = true; */
            /* enableXfwm = false; */
          };
       };
@@ -100,6 +105,7 @@
       windowManager.awesome = {
         enable = true;
       };
+
       layout = "us,ru";
       xkbOptions = "grp:ctrl_alt_toggle";
 
@@ -124,19 +130,20 @@
 
   networking.networkmanager.enable = true;
 
-  /* nixpkgs.config.packageOverrides = pkgs: {
-
-  }; */
   nixpkgs = {
       config = {
           allowUnfree = true;
 
-          packageOverrides = pkgs : {
+          /* rocmTargets = ["gfx803" "gfx900" "gfx906"]; */
+
+
+          /* packageOverrides = pkgs : {
             vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
-          };
+          }; */
 
       };
   };
+
   time.timeZone = "Europe/Moscow";
   sound.enable = true;
   # neteroworking.hostName = "nixos"; # Define your hostname.

@@ -2,7 +2,7 @@
 
 let theme = import ./theme { inherit pkgs; };
 in {
-  imports = [ ./packages ./xsession ./services ./programs ];
+  imports = [ ./packages /*./xsession*/ ./services ./programs ];
 
   home = {
     sessionVariables = {

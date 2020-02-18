@@ -4,6 +4,8 @@
   services.compton = {
     enable = true;
 
+    vSync = "opengl-svm";
+
     /* inactiveDim = "0.1"; */
     inactiveOpacity = "0.87";
     menuOpacity = "0.8";

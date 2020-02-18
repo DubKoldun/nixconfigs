@@ -69,6 +69,14 @@ with pkgs; {
     /* graphics environment related */
     # inotify-tools # notifier
 
+    # intel
+    /* refind
+    microcodeIntel */
+    /* mkl */
+    /* iucode-tool
+    i810switch
+    intel-gmmlib */
+
     # media
     gimp
 
