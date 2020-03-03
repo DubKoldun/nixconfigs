@@ -2,7 +2,7 @@
 
 let theme = import ./theme { inherit pkgs; };
 in {
-  imports = [ ./packages /*./xsession*/ ./services ./programs ];
+  imports = [ ./packages /*./xsession*/ ./services ./programs ./development ];
 
   home = {
     sessionVariables = {
@@ -11,6 +11,7 @@ in {
       PAGER = "most";
       USE_NIX2_COMMAND = 1;
     };
+
     keyboard = {
       layout = "us,ru";
       # TODO options: ctrl+space toggle

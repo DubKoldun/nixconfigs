@@ -4,6 +4,8 @@
   services.compton = {
     enable = true;
 
+    package = pkgs.picom;
+
     vSync = "opengl-svm";
 
     /* inactiveDim = "0.1"; */

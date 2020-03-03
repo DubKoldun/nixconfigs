@@ -17,10 +17,7 @@
       plugins = [
         "git"
         "sudo"
-        # "python"
-        # "pip"
         "git-extras"
-        # "catimg"
         "colored-man-pages"
         "stack"
       ];

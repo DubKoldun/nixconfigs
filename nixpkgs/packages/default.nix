@@ -25,13 +25,19 @@ with pkgs; {
 
     # editor
     atom
-    vscode
     typora
 
     # Unity #TODO Unity hub
 
     # temp
     /* jetbrains-mono */
+
+    # dotnet
+    /* dotnet-sdk # mb need for another pkgs */
+    mono
+    dotnet-sdk_3
+    dotnetCorePackages.aspnetcore_3_1
+    dotnetCorePackages.netcore_3_1
 
     # languages related
     /* c++ */        gcc gdb cmake valgrind
@@ -65,17 +71,11 @@ with pkgs; {
     zip   # package and compress (archive) files
     unzip # zip format extraction
     unrar # utility for rar archives
+    p7zip # 7z pack extraction
+    /*  */
 
     /* graphics environment related */
     # inotify-tools # notifier
-
-    # intel
-    /* refind
-    microcodeIntel */
-    /* mkl */
-    /* iucode-tool
-    i810switch
-    intel-gmmlib */
 
     # media
     gimp
