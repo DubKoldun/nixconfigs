@@ -11,8 +11,6 @@
       ./users.nix
     ];
 
-    /* ; */
-
   # Use the systemd-boot EFI boot loader.
   boot = {
     loader = {
@@ -20,17 +18,7 @@
       efi.canTouchEfiVariables = true;
     };
     plymouth.enable = true;
-
-    /* textraModulePackages = with config.boot.kernelPackages; [ rtl8812au ]; */
-    /* kernelModules = [ "kvm-intel" ]; */
-    /* kernelParams = [ "nomodoset" ]; */
   };
-
-/*
-  environment.variables = {
-        MESA_LOADER_DRIVER_OVERRIDE = "iris";
-  };
- */
 
   hardware = {
     enableAllFirmware = true;
@@ -47,18 +35,6 @@
 
     opengl = {
       enable = true;
-
-      /* package = (pkgs.mesa.override {
-        galliumDrivers = [ "nouveau" "iris" "virgl" "swrast" ]; # "virgl" "swrast"
-      }).drivers; */
-
-      /* extraPackages = with pkgs; [ */
-        /* rocm-opencl-icd */
-        /* vaapiIntel
-        vaapiVdpau
-        libvdpau-va-gl
-        intel-media-driver # only available starting nixos-19.03 or the current nixos-unstable
-      ]; */
       driSupport = true;
       driSupport32Bit = true;
     };
@@ -69,6 +45,7 @@
     autoUpgrade.enable = true;
   };
 
+  environment.systemPackages = [ pkgs.qt5.qtgraphicaleffects ];
 
   services = {
     blueman.enable = true;
@@ -81,7 +58,6 @@
         Option "DRI" "3"
         Option "TearFree" "true"
       '';
-      /* useGlamor = true; */
 
       libinput = {
         enable = true;
@@ -89,9 +65,26 @@
         naturalScrolling = false;
       };
 
-      displayManager.sddm = {
+      displayManager.sddm = let
+        fetchedTheme = pkgs.fetchFromGitHub {
+            owner = "MarianArlt";
+            repo = "sddm-sugar-dark";
+            rev = "9fc363cc3f6b3f70df948c88cbe26989386ee20d";
+            sha256 = "1vb0gr9i4dj6bzrx73cacnn012crvpj4d1n3yiw5w2yhrbpjkql7";
+        };
+
+        themeName = with builtins;
+          let folders = split "/" (toString fetchedTheme);
+          in elemAt folders (length folders - 1);
+      in {
+
         enable = true;
-        /* theme = "sugar-dark"; */
+        theme = themeName;
+        extraConfig = ''
+          [Theme]
+          ThemeDir=${fetchedTheme}/..
+          CursorTheme=Paper
+        '';
       };
 
       desktopManager = {
@@ -128,32 +121,34 @@
     ];
   };
 
-  networking.networkmanager.enable = true;
+  networking = {
+    networkmanager.enable = true;
+
+    useDHCP = false;
+
+    interfaces.wlp2s0.useDHCP = true;
+
+  };
 
   nixpkgs = {
       config = {
           allowUnfree = true;
-
-          /* rocmTargets = ["gfx803" "gfx900" "gfx906"]; */
-
-
-          /* packageOverrides = pkgs : {
-            vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
-          }; */
-
       };
   };
 
   time.timeZone = "Europe/Moscow";
   sound.enable = true;
+
+
+
+  /* dotnetCombined = with dotnetCorePackages; combinePackages [ sdk_3_1 sdk_2_2 sdk_3_0 sdk aspnetcore_2_1 ]; */
+
   # neteroworking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # The global useDHCP flag is deprecated, therefore explicitly set to false here.
   # Per-interface useDHCP will be mandatory in the future, so this generated config
   # replicates the default behaviour.
-  networking.useDHCP = false;
-  networking.interfaces.wlp2s0.useDHCP = true;
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
