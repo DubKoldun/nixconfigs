@@ -14,8 +14,8 @@ in {
 
     keyboard = {
       layout = "us,ru";
-      # TODO options: ctrl+space toggle
       # options = [ "grp:caps_toggle" ];
+      # "grp:ctrl_alt_toggle"
     };
   };
 
@@ -24,15 +24,13 @@ in {
     iconTheme = theme.icons;
     theme = theme.gtk;
     font = theme.fonts.gtk;
-    # gtk3.extraConfig = { gtk-application-prefer-dark-theme = true; };
   };
 
   programs = {
     home-manager = {
       enable = true;
-      path = "https://github.com/rycee/home-manager/archive/release-19.09.tar.gz";
-      /* path = "https://github.com/rycee/home-manager/archive/master.tar.gz"; */
-      /* https://github.com/rycee/home-manager/archive/release-19.09.tar.gz */
+      /* path = "https://github.com/rycee/home-manager/archive/release-19.09.tar.gz"; */
+      path = "https://github.com/rycee/home-manager/archive/master.tar.gz";
     };
   };
 

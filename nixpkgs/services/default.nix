@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./udiskie
+    /* ./udiskie */
     ./sxhkd       # hotkeys
     /* ./dunst */
     ./compton

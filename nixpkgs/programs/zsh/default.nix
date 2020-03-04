@@ -3,6 +3,14 @@
 {
   home.packages = [ pkgs.z-lua pkgs.gawk pkgs.coreutils ];
 
+  home.file.".dir_colors".source = pkgs.fetchFromGitHub {
+    owner = "arcticicestudio";
+    repo = "nord-dircolors";
+    rev = "v0.2.0";
+    sha256 = "1c9fa6dip266z6hfqd5nan5v6qjp6dg074lvk4rxisirm26djlzz";
+  } + /src/dir_colors;
+
+  
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
@@ -19,7 +27,7 @@
         "sudo"
         "git-extras"
         "colored-man-pages"
-        "stack"
+        /* "stack" */
       ];
     };
 

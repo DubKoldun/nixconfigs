@@ -27,15 +27,17 @@ with pkgs; {
     atom
     typora
 
-    # Unity #TODO Unity hub
+    # Unity
+    # TODO Unity hub
 
     # temp
     /* jetbrains-mono */
 
     # dotnet
     /* dotnet-sdk # mb need for another pkgs */
-    mono
+    mono5
     dotnet-sdk_3
+    omnisharp-roslyn
     dotnetCorePackages.aspnetcore_3_1
     dotnetCorePackages.netcore_3_1
 
@@ -43,7 +45,7 @@ with pkgs; {
     /* c++ */        gcc gdb cmake valgrind
     /* kotlin */     kotlin
     # /* java */       jdk12 maven antlr4
-    /* haskell */    (ghc.withPackages (ps: with ps; [ stack unordered-containers ]))
+    /* haskell */    #(ghc.withPackages (ps: with ps; [ stack unordered-containers ]))
     /* python */     (python3.withPackages (ps: with ps; [ virtualenv pip ]))
     /* python2 */    (python2.withPackages (ps: with ps; [ pip ]))
     /* javascript */ nodejs yarn
