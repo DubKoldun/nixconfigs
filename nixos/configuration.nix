@@ -4,6 +4,9 @@
 
 { config, pkgs, ... }:
 
+/* let sources = import ../../nix/sources.nix;
+in  */
+
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -65,21 +68,11 @@
         naturalScrolling = false;
       };
 
-      displayManager.sddm = let
-        fetchedTheme = pkgs.fetchFromGitHub {
-            owner = "MarianArlt";
-            repo = "sddm-sugar-dark";
-            rev = "9fc363cc3f6b3f70df948c88cbe26989386ee20d";
-            sha256 = "1vb0gr9i4dj6bzrx73cacnn012crvpj4d1n3yiw5w2yhrbpjkql7";
-        };
-
-        themeName = with builtins;
-          let folders = split "/" (toString fetchedTheme);
-          in elemAt folders (length folders - 1);
+      displayManager.sddm = let fetchedTheme = (import ../nivSource/sources.nix).aerial-sddm-theme;
       in {
-
         enable = true;
-        theme = themeName;
+        theme = with pkgs.lib;
+          lists.last (strings.splitString "/" (builtins.toString fetchedTheme));
         extraConfig = ''
           [Theme]
           ThemeDir=${fetchedTheme}/..
