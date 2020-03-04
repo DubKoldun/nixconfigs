@@ -48,7 +48,7 @@ in  */
     autoUpgrade.enable = true;
   };
 
-  environment.systemPackages = [ pkgs.qt5.qtgraphicaleffects ];
+  environment.systemPackages = [ pkgs.qt5.qtgraphicaleffects pkgs.qt5.qtmultimedia ];
 
   services = {
     blueman.enable = true;

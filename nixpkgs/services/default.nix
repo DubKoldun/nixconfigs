@@ -8,6 +8,6 @@
     ./compton
     /* ./polybar */
     /* ./i3lock-fancy */
-    ./background
+    /* ./background */
   ];
 }
