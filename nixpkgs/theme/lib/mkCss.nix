@@ -10,3 +10,8 @@ let
         };";
     };
 in attrsToCSSVars "theme"
+/*
+theme {
+  color:
+}
+*/

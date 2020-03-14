@@ -5,100 +5,109 @@ with pkgs; {
     firefox
     google-chrome
     git gitAndTools.diff-so-fancy
-    # docker docker_compose
 
     # filesystem utility packages
-    exa     # rip ls
-    ripgrep # rip grep
     lf      # terminal file manager
-    file    # determine file type
-    most    # page text file
     fd      # find
-    jmtpfs  # a FUSE filesystem for MTP devices like Android phones
+    exa     # rip ls
+    file    # determine file type
+    htop    # process management
+    most    # page text file
     wget    # download
-    htop
+    jmtpfs  # a FUSE filesystem for MTP devices like Android phones
+    ripgrep # rip grep
 
     # utility packages
+    xclip      # clipboard manipulations
     gnumake    # control the generation of non-source files from sources
     binutils   # tools for manipulating binaries (linker, assembler, etc.)
-    xclip      # clipboard manipulations
-    niv        # easy fetch for nix
 
     # editor
-    atom
     typora
 
     # Unity
     # TODO Unity hub
 
-    # temp
-    /* jetbrains-mono */
+    # terminal env
+    kitty
 
-    # dotnet
-    /* dotnet-sdk # mb need for another pkgs */
+    # terminal helpful
+    man    # an interface to the on-line reference manuals
+    tldr   # a collection of simplified and community-driven man pages
+    psmisc # small useful utilities (such as fuser, killall and pstree)
+
+    # graphic libs
+    opencv4
+    tesseract4   # ocs (optical character recognition)
+
+    # frameworks
+    # TODO Qt
+
+    # messaging
+    slack
+    tdesktop
+
+    # pictures
+    gimp
+    imagemagick  # tool for convert (pdf -> image)
+
+    # document related
+    feh
+    evince
+    libreoffice-unwrapped
+    # TODO e-book-read
+
+    # archive management
+    zip   # package and compress (archive) files
+    atool # archive command line helper
+    unzip # zip format extraction
+    unrar # utility for rar archives
+    p7zip # 7z pack extraction
+
+    # mpv          # a media player
+    playerctl      # controlling media players
+    pavucontrol    # PulseAudio Volume Control
+    pulseeffects   # limiter, compressor, reverberation, equalizer and auto volume effects
+    (speechd.override { withPulse = true; })
+
+    # NixOS house keeping
+    niv    # easy fetch for nix
+    nox    # tools to make nix nicer to use
+    vulnix # NixOS vulnerability scanner
+
+    # languages related
+    /* c++ */
+    gcc
+    gdb
+    cmake
+    valgrind
+
+    /* kotlin */
+    kotlin
+
+    /* python */
+    (python3.withPackages (ps: with ps; [ virtualenv pip ]))
+
+    /* python2 */
+    (python2.withPackages (ps: with ps; [ pip ]))
+
+    /* dotnet */
     mono5
     dotnet-sdk_3
     omnisharp-roslyn
     dotnetCorePackages.aspnetcore_3_1
     dotnetCorePackages.netcore_3_1
 
-    # languages related
-    /* c++ */        gcc gdb cmake valgrind
-    /* kotlin */     kotlin
-    # /* java */       jdk12 maven antlr4
-    /* haskell */    #(ghc.withPackages (ps: with ps; [ stack unordered-containers ]))
-    /* python */     (python3.withPackages (ps: with ps; [ virtualenv pip ]))
-    /* python2 */    (python2.withPackages (ps: with ps; [ pip ]))
-    /* javascript */ nodejs yarn
-
-    # terminal env
-    kitty
-
-    # terminal helpful
-    tldr   # a collection of simplified and community-driven man pages
-    psmisc # small useful utilities (such as fuser, killall and pstree)
-    man    # an interface to the on-line reference manuals
-
-    # messaging
-    tdesktop
-    slack
-
-    # document related
-    libreoffice-unwrapped
-    evince
-    feh
-    # TODO e-book-read
-
-    # archive management
-    atool # archive command line helper
-    zip   # package and compress (archive) files
-    unzip # zip format extraction
-    unrar # utility for rar archives
-    p7zip # 7z pack extraction
-    /*  */
-
-    /* graphics environment related */
-    # inotify-tools # notifier
-
-    # media
-    gimp
-
-    # mpv          # a media player
-    pulseeffects # limiter, compressor, reverberation, equalizer and auto volume effects
-    playerctl    # controlling media players
-    pavucontrol  # PulseAudio Volume Control
-    (speechd.override { withPulse = true; })
-
-    # NixOS house keeping
-    nox    # tools to make nix nicer to use
-    vulnix # NixOS vulnerability scanner
-
     # other
-    blueman                 # bluetooth
-    shared-mime-info        # a database of common MIME types
-    gnutls                  # the GNU Transport Layer Security Library
+    gvfs                    # 
     gnupg                   # the GNU Privacy Guard suite of programs
+    gnutls                  # the GNU Transport Layer Security Library - software implementation of the TLS, SSL and DTLS protocols
+    blueman                 # bluetooth
     gnome3.dconf            # FIXING bugs, wtf, idk
-    /* gnome3.gnome-tweaks */
+    shared-mime-info        # a database of common MIME types
+
+    # entertainment
+    steam
+
   ];
 }

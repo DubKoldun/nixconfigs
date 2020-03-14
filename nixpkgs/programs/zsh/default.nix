@@ -1,6 +1,7 @@
 { config, lib, pkgs, ... }:
 
-{
+let variables = import ./variables.nix;
+in {
   home.packages = [ pkgs.z-lua pkgs.gawk pkgs.coreutils ];
 
   home.file.".dir_colors".source = (import ../../../nix/sources.nix).nord-dircolors + /src/dir_colors;
@@ -13,7 +14,7 @@
       ignoreDups = false;
     };
 
-    /* sessionVariables = { GITTOKEN = variables.nix.gitToken; }; */
+    sessionVariables = { GITTOKEN = variables.gitToken; };
 
     oh-my-zsh = {
       enable = true;
