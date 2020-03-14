@@ -51,6 +51,7 @@ in  */
   environment.systemPackages = [ pkgs.qt5.qtgraphicaleffects pkgs.qt5.qtmultimedia ];
 
   services = {
+    gvfs.enable = true;
     blueman.enable = true;
 
     xserver = {

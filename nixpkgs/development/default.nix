@@ -3,6 +3,7 @@
 {
   imports = [
     ./vscode
+    ./atom
     /* ./tools */
   ];
 }
