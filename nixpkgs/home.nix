@@ -1,6 +1,6 @@
 { lib, pkgs, ... }:
 
-let theme = import ./theme { inherit pkgs; };
+let theme = import ./theme { inherit pkgs lib; };
 in {
   imports = [ ./packages /*./xsession*/ ./services ./programs ./development ];
 
@@ -10,12 +10,11 @@ in {
       EDITOR = "atom";
       PAGER = "most";
       USE_NIX2_COMMAND = 1;
+      XDG_CURRENT_DESKTOP = "Gnome"; # telegram shitty file-piker fix
     };
 
     keyboard = {
       layout = "us,ru";
-      # options = [ "grp:caps_toggle" ];
-      # "grp:ctrl_alt_toggle"
     };
   };
 

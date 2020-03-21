@@ -82,6 +82,19 @@ with pkgs; {
     cmake
     valgrind
 
+    /* haskell */
+    (ghc.withPackages (ps: with ps; [
+       # stack cabal            # builders
+       stylish-haskell        # prettyfier
+       unordered-containers   # containers for lab
+       hspec hedgehog tasty   # testing
+       tasty-hedgehog         # testing
+       tasty-hspec            # testing
+       alex                   # generating lexical analysers in Haskell
+       happy                  # parser generator for Haskell
+       ] )
+    )
+
     /* kotlin */
     kotlin
 
@@ -99,7 +112,7 @@ with pkgs; {
     dotnetCorePackages.netcore_3_1
 
     # other
-    gvfs                    # 
+    gvfs                    #
     gnupg                   # the GNU Privacy Guard suite of programs
     gnutls                  # the GNU Transport Layer Security Library - software implementation of the TLS, SSL and DTLS protocols
     blueman                 # bluetooth
