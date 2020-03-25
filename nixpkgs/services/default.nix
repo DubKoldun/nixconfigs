@@ -2,12 +2,9 @@
 
 {
   imports = [
-    /* ./udiskie */
+    ./udiskie
     ./sxhkd       # hotkeys
-    /* ./dunst */
-    ./compton
-    /* ./polybar */
-    /* ./i3lock-fancy */
+    ./picom
     /* ./background */
   ];
 }

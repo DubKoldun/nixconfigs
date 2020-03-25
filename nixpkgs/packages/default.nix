@@ -26,7 +26,7 @@ with pkgs; {
     typora
 
     # Unity
-    # TODO Unity hub
+    /* unityhub */
 
     # terminal env
     kitty
@@ -121,6 +121,7 @@ with pkgs; {
 
     # entertainment
     steam
+    discord
 
   ];
 }
