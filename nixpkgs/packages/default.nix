@@ -26,7 +26,7 @@ with pkgs; {
     typora
 
     # Unity
-    /* unityhub */
+    unityhub
 
     # terminal env
     kitty
@@ -37,8 +37,8 @@ with pkgs; {
     psmisc # small useful utilities (such as fuser, killall and pstree)
 
     # graphic libs
-    opencv4
-    tesseract4   # ocs (optical character recognition)
+    opencv4      # ocr with knn
+    tesseract4   # ocr (optical character recognition)
 
     # frameworks
     # TODO Qt
