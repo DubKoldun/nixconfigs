@@ -3,8 +3,8 @@
 {
   imports = [
     ./bat
-    ./most
     ./fzf
+    ./most
     /* ./rofi */
     /* ./networkmanager-dmenu */
     ./zsh

@@ -26,6 +26,7 @@ with pkgs; {
     typora
 
     # Unity
+    unity3d
     unityhub
 
     # terminal env
@@ -34,6 +35,7 @@ with pkgs; {
     # terminal helpful
     man    # an interface to the on-line reference manuals
     tldr   # a collection of simplified and community-driven man pages
+    drive  # google drive control from terminal
     psmisc # small useful utilities (such as fuser, killall and pstree)
 
     # graphic libs
@@ -114,14 +116,23 @@ with pkgs; {
     # other
     gvfs                    #
     gnupg                   # the GNU Privacy Guard suite of programs
+    light                   # brightness
     gnutls                  # the GNU Transport Layer Security Library - software implementation of the TLS, SSL and DTLS protocols
     blueman                 # bluetooth
     gnome3.dconf            # FIXING bugs, wtf, idk
     shared-mime-info        # a database of common MIME types
 
+    # xfce
+    xorg.xbacklight
+    xfce4-14.xfce4-appfinder
+    xfce4-14.xfce4-power-manager
+    /* xfce4-14.xfce4-battery-plugin */
+    /* xfce4-14.xfce4-pulseaudio-plugin */
+
     # entertainment
     steam
     discord
+    zoom-us
 
   ];
 }

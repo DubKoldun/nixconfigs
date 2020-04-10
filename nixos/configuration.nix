@@ -26,6 +26,8 @@ in  */
   hardware = {
     enableAllFirmware = true;
 
+    brightnessctl.enable = true;
+
     pulseaudio = {
       enable = true;
       package = pkgs.pulseaudioFull;
@@ -69,7 +71,7 @@ in  */
         naturalScrolling = false;
       };
 
-      displayManager.sddm = let fetchedTheme = (import ../nivSource/sources.nix).aerial-sddm-theme;
+      displayManager.sddm = let fetchedTheme = (import ../nivSource/sources.nix).sddm_theme_sugar_dark;
       in {
         enable = true;
         theme = with pkgs.lib;
@@ -82,10 +84,11 @@ in  */
       };
 
       desktopManager = {
+         xterm.enable = false;
+         /* xfce4-14.enable = true; */
          xfce = {
            enable = true;
-           /* noDesktop = true; */
-           /* enableXfwm = false; */
+           extraSessionCommands = "sysctl net.ipv4.ip_default_ttl=65\nsudo xfce4-power-manager";
          };
       };
 
@@ -132,8 +135,6 @@ in  */
 
   time.timeZone = "Europe/Moscow";
   sound.enable = true;
-
-
 
   /* dotnetCombined = with dotnetCorePackages; combinePackages [ sdk_3_1 sdk_2_2 sdk_3_0 sdk aspnetcore_2_1 ]; */
 
