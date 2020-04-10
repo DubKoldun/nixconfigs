@@ -3,8 +3,10 @@
 {
   imports = [
     ./udiskie
-    ./sxhkd       # hotkeys
+    /* ./sxhkd       # hotkeys */
     ./picom
+    ./power-manager
+    /* ./adb */
     /* ./background */
   ];
 }

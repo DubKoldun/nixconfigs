@@ -38,6 +38,10 @@ in {
       }
     ];
     shellAliases = {
+
+      bl = "light -U 49";
+      bu = "light -A 50";
+
       hms = "home-manager switch";
       nsp = "nix-shell --run zsh -p";
       npd = "nix-channel --update && hms";
