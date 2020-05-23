@@ -39,7 +39,9 @@ with pkgs; {
     psmisc # small useful utilities (such as fuser, killall and pstree)
 
     # graphic libs
-    opencv4      # ocr with knn
+    libpng       # The official reference implementation for the PNG file format with animation patch
+    opencv4      # Open Computer Vision Library
+    leptonica    # inmage processing and analysis library
     tesseract4   # ocr (optical character recognition)
 
     # frameworks
@@ -56,7 +58,7 @@ with pkgs; {
     # document related
     feh
     evince
-    libreoffice-unwrapped
+    /* libreoffice-fresh */
     # TODO e-book-read
 
     # archive management
@@ -64,23 +66,27 @@ with pkgs; {
     atool # archive command line helper
     unzip # zip format extraction
     unrar # utility for rar archives
-    p7zip # 7z pack extraction
+    /* p7zip # 7z pack extraction */
 
-    # mpv          # a media player
+    # media
+    mpv            # a media player
     playerctl      # controlling media players
+    # obs-studio     # recording and stream
     pavucontrol    # PulseAudio Volume Control
     pulseeffects   # limiter, compressor, reverberation, equalizer and auto volume effects
     (speechd.override { withPulse = true; })
 
     # NixOS house keeping
-    niv    # easy fetch for nix
-    nox    # tools to make nix nicer to use
-    vulnix # NixOS vulnerability scanner
+    niv          # easy fetch for nix
+    nox          # tools to make nix nicer to use
+    vulnix       # NixOS vulnerability scanner
+    pkg-config   # A tool that allows packages to find out information about other packages
 
     # languages related
     /* c++ */
     gcc
     gdb
+    glibc
     cmake
     valgrind
 
@@ -114,6 +120,7 @@ with pkgs; {
     dotnetCorePackages.netcore_3_1
 
     # other
+    etcher
     gvfs                    #
     gnupg                   # the GNU Privacy Guard suite of programs
     light                   # brightness
@@ -131,8 +138,9 @@ with pkgs; {
 
     # entertainment
     steam
+    lutris
     discord
-    zoom-us
+    /* zoom-us */
 
   ];
 }
