@@ -1,7 +1,7 @@
 # nixconfigs
 
-175 home manager generation
-71 global generation
+191 home manager generation
+80 global generation
 
 Have to create symlink from etc/nixconfigs to nixconfigs
 Have to create symlink from etc/nixos to nixos
