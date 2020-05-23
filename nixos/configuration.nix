@@ -40,13 +40,21 @@ in  */
 
     opengl = {
       enable = true;
+      package = pkgs.mesa.drivers;
+      package32 = pkgs.pkgsi686Linux.mesa.drivers;
       driSupport = true;
       driSupport32Bit = true;
     };
   };
 
+  /* users.users.jane.packages = with pkgs;
+  [
+    vulkan-tools
+    lutris
+  ]; */
+
   system = {
-    stateVersion = "19.09";
+    stateVersion = "20.03";
     autoUpgrade.enable = true;
   };
 
@@ -59,7 +67,7 @@ in  */
     xserver = {
       enable = true;
 
-      videoDrivers = [ "modesetting" "intel" ];
+      videoDrivers = [ "modesetting" "intel" ]; #libgl1-mesa-dri:i386  mesa-vulkan-drivers:i386
       deviceSection = ''
         Option "DRI" "3"
         Option "TearFree" "true"
@@ -130,13 +138,14 @@ in  */
   nixpkgs = {
       config = {
           allowUnfree = true;
+          /* allowBroken = true; */
       };
   };
 
   time.timeZone = "Europe/Moscow";
   sound.enable = true;
 
-  /* dotnetCombined = with dotnetCorePackages; combinePackages [ sdk_3_1 sdk_2_2 sdk_3_0 sdk aspnetcore_2_1 ]; */
+  /* dotnetCombined = with dotnetCorePackages; combinePackages [ sdk_3_1 sdk_2_2 sdk_3_0 sdk aspnetcore_3_1 netcore_3_1]; */
 
   # neteroworking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
