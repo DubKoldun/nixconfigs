@@ -7,15 +7,16 @@ with pkgs; {
     git gitAndTools.diff-so-fancy
 
     # filesystem utility packages
-    lf      # terminal file manager
-    fd      # find
-    exa     # rip ls
-    file    # determine file type
-    htop    # process management
-    most    # page text file
-    wget    # download
-    jmtpfs  # a FUSE filesystem for MTP devices like Android phones
-    ripgrep # rip grep
+    lf          # terminal file manager
+    fd          # find
+    exa         # rip ls
+    file        # determine file type
+    htop        # process management
+    most        # page text file
+    wget        # download
+    jmtpfs      # a FUSE filesystem for MTP devices like Android phones
+    ripgrep     # rip grep
+    electron_5  # Cross platform desktop application shell (for typora)
 
     # utility packages
     xclip      # clipboard manipulations
@@ -23,11 +24,11 @@ with pkgs; {
     binutils   # tools for manipulating binaries (linker, assembler, etc.)
 
     # editor
-    typora
+    # typora
 
     # Unity
-    unity3d
-    unityhub
+    /* unity3d
+    unityhub */
 
     # terminal env
     kitty
@@ -40,7 +41,7 @@ with pkgs; {
 
     # graphic libs
     libpng       # The official reference implementation for the PNG file format with animation patch
-    opencv4      # Open Computer Vision Library
+    opencv       # Open Computer Vision Library
     leptonica    # inmage processing and analysis library
     tesseract4   # ocr (optical character recognition)
 
@@ -66,10 +67,12 @@ with pkgs; {
     atool # archive command line helper
     unzip # zip format extraction
     unrar # utility for rar archives
-    /* p7zip # 7z pack extraction */
+    p7zip # 7z pack extraction
 
     # media
     mpv            # a media player
+    audacity
+    ffmpeg_4
     playerctl      # controlling media players
     # obs-studio     # recording and stream
     pavucontrol    # PulseAudio Volume Control
@@ -93,6 +96,7 @@ with pkgs; {
     /* haskell */
     (ghc.withPackages (ps: with ps; [
        # stack cabal            # builders
+       hlint
        stylish-haskell        # prettyfier
        unordered-containers   # containers for lab
        hspec hedgehog tasty   # testing
@@ -110,14 +114,14 @@ with pkgs; {
     (python3.withPackages (ps: with ps; [ virtualenv pip ]))
 
     /* python2 */
-    (python2.withPackages (ps: with ps; [ pip ]))
+    /* (python2.withPackages (ps: with ps; [ pip ])) */
 
     /* dotnet */
-    mono5
+    /* mono5
     dotnet-sdk_3
     omnisharp-roslyn
-    dotnetCorePackages.aspnetcore_3_1
     dotnetCorePackages.netcore_3_1
+    dotnetCorePackages.aspnetcore_3_1 */
 
     # other
     etcher
@@ -138,7 +142,7 @@ with pkgs; {
 
     # entertainment
     steam
-    lutris
+    minecraft
     discord
     /* zoom-us */
 
