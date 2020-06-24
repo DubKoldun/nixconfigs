@@ -41,24 +41,32 @@ in  */
     opengl = {
       enable = true;
       package = pkgs.mesa.drivers;
+
+      extraPackages = with pkgs; [
+             libGL
+             vaapiIntel
+             vaapiVdpau
+             libvdpau-va-gl
+             intel-media-driver
+             ];
+      setLdLibraryPath = true;
+
       package32 = pkgs.pkgsi686Linux.mesa.drivers;
       driSupport = true;
       driSupport32Bit = true;
     };
-  };
 
-  /* users.users.jane.packages = with pkgs;
-  [
-    vulkan-tools
-    lutris
-  ]; */
+
+  };
 
   system = {
     stateVersion = "20.03";
     autoUpgrade.enable = true;
   };
-
-  environment.systemPackages = [ pkgs.qt5.qtgraphicaleffects pkgs.qt5.qtmultimedia ];
+  environment.systemPackages = with pkgs; [
+    pkgs.qt5.qtgraphicaleffects pkgs.qt5.qtmultimedia
+    (steam.override { extraPkgs = pkgs: [ mono gtk3 gtk3-x11 libgdiplus zlib ]; nativeOnly = true; }).run
+    ];
 
   services = {
     gvfs.enable = true;
@@ -67,7 +75,7 @@ in  */
     xserver = {
       enable = true;
 
-      videoDrivers = [ "modesetting" "intel" ]; #libgl1-mesa-dri:i386  mesa-vulkan-drivers:i386
+      videoDrivers = [ "modesetting" "intel" "libvulkan1" "mesa-vulkan-drivers" "vulkan-utils" ]; #libgl1-mesa-dri:i386  mesa-vulkan-drivers:i386
       deviceSection = ''
         Option "DRI" "3"
         Option "TearFree" "true"

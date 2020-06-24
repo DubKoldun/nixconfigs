@@ -17,10 +17,10 @@
         "homepage": "http://zdharma.org",
         "owner": "zdharma",
         "repo": "fast-syntax-highlighting",
-        "rev": "a58aa4ef2452640cc61afa1d31bce0ef3717046c",
-        "sha256": "169y8y32q593y6g9zrcbaxncdzxk3p19rw81q5q6allziwxv81kg",
+        "rev": "9f1087f3b452f1336ecb65f54e1e7ae13039e11b",
+        "sha256": "1amsx34zkl0g0fip8ggig4s3v2mph1x55ffa4rd9pqr2966d2vc3",
         "type": "tarball",
-        "url": "https://github.com/zdharma/fast-syntax-highlighting/archive/a58aa4ef2452640cc61afa1d31bce0ef3717046c.tar.gz",
+        "url": "https://github.com/zdharma/fast-syntax-highlighting/archive/9f1087f3b452f1336ecb65f54e1e7ae13039e11b.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "niv": {
@@ -41,10 +41,10 @@
         "homepage": "https://github.com/NixOS/nixpkgs",
         "owner": "NixOS",
         "repo": "nixpkgs-channels",
-        "rev": "a7ceb2536ab11973c59750c4c48994e3064a75fa",
-        "sha256": "0hka65f31njqpq7i07l22z5rs7lkdfcl4pbqlmlsvnysb74ynyg1",
+        "rev": "35eda4aede5c9c90c6dfc5c4f83cdac7cae59028",
+        "sha256": "047gkqd304vc07r8kgf13443waaxmhy4skkgj3i2x19cjw7qvl78",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs-channels/archive/a7ceb2536ab11973c59750c4c48994e3064a75fa.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs-channels/archive/35eda4aede5c9c90c6dfc5c4f83cdac7cae59028.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nord-dircolors": {
@@ -53,10 +53,10 @@
         "homepage": "https://www.nordtheme.com/ports/dircolors",
         "owner": "arcticicestudio",
         "repo": "nord-dircolors",
-        "rev": "5a2763c87860a480c15f45a31d9ac7f0c04efc4c",
-        "sha256": "1g3klhlmd5d4ywbnxkv0f6kv4pfr3hbaz3fryd9mbzdbp7zp32sm",
+        "rev": "addb3b427e008d23affc721450fde86f27566f1d",
+        "sha256": "0s7bd38269z4b9j6f90nscjkbdbh23z3mlg89fnk7ndyrpf5dqlj",
         "type": "tarball",
-        "url": "https://github.com/arcticicestudio/nord-dircolors/archive/5a2763c87860a480c15f45a31d9ac7f0c04efc4c.tar.gz",
+        "url": "https://github.com/arcticicestudio/nord-dircolors/archive/addb3b427e008d23affc721450fde86f27566f1d.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "sddm-chinese-painting-theme": {
@@ -77,10 +77,10 @@
         "homepage": null,
         "owner": "DubKoldun",
         "repo": "sddm_theme_sugar_dark",
-        "rev": "d6968c43d6dd036aa610f998bfc9434d1e1016c9",
-        "sha256": "0mmybj782sj9x409sfqxgj563irryyk96g4g8c7ksgwgk8nymk5m",
+        "rev": "d6ff456b93e3174237d6b943f4138610284785c9",
+        "sha256": "02kg868pphqpwi030dh2mdsvz6b8169232axd4phpclhflxlz7ah",
         "type": "tarball",
-        "url": "https://github.com/DubKoldun/sddm_theme_sugar_dark/archive/d6968c43d6dd036aa610f998bfc9434d1e1016c9.tar.gz",
+        "url": "https://github.com/DubKoldun/sddm_theme_sugar_dark/archive/d6ff456b93e3174237d6b943f4138610284785c9.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
