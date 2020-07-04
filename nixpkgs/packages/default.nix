@@ -30,6 +30,10 @@ with pkgs; {
     /* unity3d
     unityhub */
 
+    #jb
+    jetbrains.jdk
+    jetbrains.idea-community
+
     # terminal env
     kitty
 
@@ -59,8 +63,8 @@ with pkgs; {
     # document related
     feh
     evince
-    /* libreoffice-fresh */
-    # TODO e-book-read
+    # pandoc
+    # texlive.combined.scheme-medium  
 
     # archive management
     zip   # package and compress (archive) files
@@ -82,46 +86,8 @@ with pkgs; {
     # NixOS house keeping
     niv          # easy fetch for nix
     nox          # tools to make nix nicer to use
-    vulnix       # NixOS vulnerability scanner
+    # vulnix       # NixOS vulnerability scanner
     pkg-config   # A tool that allows packages to find out information about other packages
-
-    # languages related
-    /* c++ */
-    gcc
-    gdb
-    glibc
-    cmake
-    valgrind
-
-    /* haskell */
-    (ghc.withPackages (ps: with ps; [
-       # stack cabal            # builders
-       hlint
-       stylish-haskell        # prettyfier
-       unordered-containers   # containers for lab
-       hspec hedgehog tasty   # testing
-       tasty-hedgehog         # testing
-       tasty-hspec            # testing
-       alex                   # generating lexical analysers in Haskell
-       happy                  # parser generator for Haskell
-       ] )
-    )
-
-    /* kotlin */
-    kotlin
-
-    /* python */
-    (python3.withPackages (ps: with ps; [ virtualenv pip ]))
-
-    /* python2 */
-    /* (python2.withPackages (ps: with ps; [ pip ])) */
-
-    /* dotnet */
-    /* mono5
-    dotnet-sdk_3
-    omnisharp-roslyn
-    dotnetCorePackages.netcore_3_1
-    dotnetCorePackages.aspnetcore_3_1 */
 
     # other
     etcher

@@ -3,7 +3,7 @@
 {
   imports = [
     ./vscode
-    ./atom
-    /* ./tools */
+    # ./jetbrains
+    ./programming-languages
   ];
 }

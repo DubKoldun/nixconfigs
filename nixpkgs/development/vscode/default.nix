@@ -11,8 +11,8 @@
             "window.zoomLevel" = 0;
             "explorer.confirmDelete" = false;
             "extensions.ignoreRecommendations" = false;
-            "markdown.preview.scrollPreviewWithEditor" = false;
-            
+            "markdown.preview.scrollEditorWithPreview" = false;
+            "debug.javascript.usePreview" = true;
       };
 
   };
