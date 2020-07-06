@@ -49,7 +49,7 @@ in {
 
       homed = "nano ~/.config/nixpkgs/home.nix";
       confed = "sudo nano /etc/nixos/configuration.nix";
-      confs = "z conf; atom .";
+      confs = "z conf; code .";
 
       l = "exa -lh --git";
       ll = "exa -lhT --git -L 2";
