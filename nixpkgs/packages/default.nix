@@ -24,7 +24,7 @@ with pkgs; {
     binutils   # tools for manipulating binaries (linker, assembler, etc.)
 
     # editor
-    # typora
+    typora
 
     # Unity
     /* unity3d
@@ -58,6 +58,9 @@ with pkgs; {
 
     # pictures
     gimp
+    grim  # screenshot
+    slurp # crop screen
+    wl-clipboard
     imagemagick  # tool for convert (pdf -> image)
 
     # document related
@@ -89,9 +92,19 @@ with pkgs; {
     # vulnix       # NixOS vulnerability scanner
     pkg-config   # A tool that allows packages to find out information about other packages
 
+    # server
+    # nginx
+    heroku # deployment
+    # certbot # ACME client that can obtain certs and extensibly update server configurations
+
+    # data base
+    pgcli
+    # pgadmin
+    postgresql
+
     # other
-    etcher
     gvfs                    #
+    etcher
     gnupg                   # the GNU Privacy Guard suite of programs
     light                   # brightness
     gnutls                  # the GNU Transport Layer Security Library - software implementation of the TLS, SSL and DTLS protocols
@@ -108,8 +121,9 @@ with pkgs; {
 
     # entertainment
     steam
-    minecraft
+    spotify
     discord
+    minecraft
     /* zoom-us */
 
   ];
