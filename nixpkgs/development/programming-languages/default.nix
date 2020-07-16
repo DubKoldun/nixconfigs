@@ -31,8 +31,11 @@
         /* kotlin */
         kotlin
 
+        /* java */
+        gradle
+
         /* python */
-        (python3.withPackages (ps: with ps; [ virtualenv pip ]))
+        (python38.withPackages (ps: with ps; [ virtualenv pip numpy librosa numba ]))
 
         /* python2 */
         /* (python2.withPackages (ps: with ps; [ pip ])) */

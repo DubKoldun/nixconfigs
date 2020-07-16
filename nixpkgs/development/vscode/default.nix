@@ -13,6 +13,7 @@
             "extensions.ignoreRecommendations" = false;
             "markdown.preview.scrollEditorWithPreview" = false;
             "debug.javascript.usePreview" = true;
+            "gitmoji.outputType" = "code";
       };
 
   };
