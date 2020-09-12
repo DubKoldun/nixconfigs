@@ -23,6 +23,18 @@
         "url": "https://github.com/zdharma/fast-syntax-highlighting/archive/9f1087f3b452f1336ecb65f54e1e7ae13039e11b.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "home-manager": {
+        "branch": "master",
+        "description": "Manage a user environment using Nix",
+        "homepage": "",
+        "owner": "rycee",
+        "repo": "home-manager",
+        "rev": "249650a07ee2d949fa599f3177a8c234adbd1bee",
+        "sha256": "0x858b7i15kx74aqwgi2n5ls7zjhcky95z9vbxfdlawmaz371dma",
+        "type": "tarball",
+        "url": "https://github.com/rycee/home-manager/archive/249650a07ee2d949fa599f3177a8c234adbd1bee.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "niv": {
         "branch": "master",
         "description": "Easy dependency management for Nix projects",
@@ -36,15 +48,28 @@
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs": {
-        "branch": "nixos-19.09",
+        "branch": "nixos-unstable",
         "description": "A read-only mirror of NixOS/nixpkgs tracking the released channels. Send issues and PRs to",
         "homepage": "https://github.com/NixOS/nixpkgs",
         "owner": "NixOS",
         "repo": "nixpkgs-channels",
-        "rev": "35eda4aede5c9c90c6dfc5c4f83cdac7cae59028",
-        "sha256": "047gkqd304vc07r8kgf13443waaxmhy4skkgj3i2x19cjw7qvl78",
+        "rev": "61525137fd1002f6f2a5eb0ea27d480713362cd5",
+        "sha256": "1gzwz9jvfcf0is6zma7qlgszkngfb2aa4kam0nhs0qnwb4nqn7mg",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs-channels/archive/35eda4aede5c9c90c6dfc5c4f83cdac7cae59028.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs-channels/archive/61525137fd1002f6f2a5eb0ea27d480713362cd5.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
+        "version": "8ba41a1e14961fe43523f29b8b39acb569b70e72"
+    },
+    "nixpkgs-turbo": {
+        "branch": "master",
+        "description": "Nix Packages collection",
+        "homepage": null,
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "1bdad26c20b294bb2d953ae3c8290e93b97a516b",
+        "sha256": "02mvpn6v4k3n7k88d3iqg8a5yzpi3l2xpca605nw5v05j6h1frrm",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs/archive/1bdad26c20b294bb2d953ae3c8290e93b97a516b.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nord-dircolors": {
