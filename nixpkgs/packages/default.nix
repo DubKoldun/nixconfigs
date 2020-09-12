@@ -16,7 +16,6 @@ with pkgs; {
     wget        # download
     jmtpfs      # a FUSE filesystem for MTP devices like Android phones
     ripgrep     # rip grep
-    electron_5  # Cross platform desktop application shell (for typora)
 
     # utility packages
     xclip      # clipboard manipulations
@@ -66,6 +65,7 @@ with pkgs; {
     # document related
     feh
     evince
+    # wpsoffice
     # pandoc
     # texlive.combined.scheme-medium  
 
@@ -123,8 +123,9 @@ with pkgs; {
     steam
     spotify
     discord
+    ripcord
     minecraft
-    /* zoom-us */
+    zoom-us
 
   ];
 }

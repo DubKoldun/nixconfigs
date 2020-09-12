@@ -13,6 +13,7 @@
         (ghc.withPackages (ps: with ps; [
         #  stack cabal            # builders
         
+        # hoogle                 # Haskell API Search
         microlens              # A tiny lens library with no dependencies
         unordered-containers   # containers for lab
         
