@@ -25,8 +25,8 @@ in  */
 
   hardware = {
     enableAllFirmware = true;
-
-    brightnessctl.enable = true;
+    # TODO temporary to check build
+    # brightnessctl.enable = true;
 
     pulseaudio = {
       enable = true;
@@ -102,7 +102,7 @@ in  */
         naturalScrolling = false;
       };
 
-      displayManager.sddm = let fetchedTheme = (import ../nivSource/sources.nix).sddm_theme_sugar_dark;
+      displayManager.sddm = let fetchedTheme = (import ../nix/sources.nix).sddm_theme_sugar_dark;
       in {
         enable = true;
         theme = with pkgs.lib;

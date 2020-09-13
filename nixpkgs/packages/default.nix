@@ -1,6 +1,9 @@
 { pkgs, ... }:
 
-with pkgs; {
+let
+  sources = import ../../nix/sources.nix;
+  turbopkgs = import "${sources.nixpkgs-turbo}" { };
+in with pkgs; {
   home.packages = [
     firefox
     google-chrome
@@ -67,7 +70,7 @@ with pkgs; {
     evince
     # wpsoffice
     # pandoc
-    # texlive.combined.scheme-medium  
+    # texlive.combined.scheme-medium
 
     # archive management
     zip   # package and compress (archive) files
@@ -122,8 +125,8 @@ with pkgs; {
     # entertainment
     steam
     spotify
-    discord
-    ripcord
+    turbopkgs.discord
+
     minecraft
     zoom-us
 
