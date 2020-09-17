@@ -123,9 +123,9 @@ in with pkgs; {
     /* xfce4-14.xfce4-pulseaudio-plugin */
 
     # entertainment
-    steam
+    #steam
     spotify
-    turbopkgs.discord
+    #turbopkgs.discord
 
     minecraft
     zoom-us

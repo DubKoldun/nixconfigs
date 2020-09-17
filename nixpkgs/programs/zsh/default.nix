@@ -14,7 +14,7 @@ in {
       ignoreDups = false;
     };
 
-    sessionVariables = { GITTOKEN = variables.gitToken; };
+
 
     oh-my-zsh = {
       enable = true;

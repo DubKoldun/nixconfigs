@@ -18,7 +18,7 @@ in  */
   boot = {
     loader = {
       systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
+      # efi.canTouchEfiVariables = true;
     };
     plymouth.enable = true;
   };
@@ -115,12 +115,13 @@ in  */
       };
 
       desktopManager = {
-         xterm.enable = false;
+	plasma5.enable = true;
+       #  xterm.enable = false;
          /* xfce4-14.enable = true; */
-         xfce = {
-           enable = true;
-           extraSessionCommands = "sysctl net.ipv4.ip_default_ttl=65\nsudo xfce4-power-manager";
-         };
+        # xfce = {
+         #  enable = true;
+          # extraSessionCommands = "sysctl net.ipv4.ip_default_ttl=65\nsudo xfce4-power-manager";
+         #};
       };
 
       windowManager.awesome = {

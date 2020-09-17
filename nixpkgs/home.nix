@@ -18,6 +18,11 @@ in {
     };
   };
 
+  nixpkgs = {
+    config.allowUnfree = true;
+
+  };
+
   gtk = {
     enable = true;
     iconTheme = theme.icons;

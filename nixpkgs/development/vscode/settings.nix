@@ -1,10 +1,8 @@
-{ config, lib, pkgs, autoPatchelfHook, ... }:
+ { config, pkgs, ... }:
 
-
-{
-  programs.vscode = {
-      enable = true;
-      userSettings = {
+with config.lib; {
+ 
+ userSettings = {
             "omnisharp.enableRoslynAnalyzers" = true;
             "omnisharp.path" = "/home/vutaliy/.nix-profile/bin/omnisharp";
             "workbench.colorTheme" = "Monokai Dimmed";
@@ -15,5 +13,5 @@
             "debug.javascript.usePreview" = true;
             "gitmoji.outputType" = "code";
       };
-  };
+
 }
