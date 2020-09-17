@@ -169,6 +169,8 @@ in  */
   time.timeZone = "Europe/Moscow";
   sound.enable = true;
 
+  #programs.gnupg.agent.pinentryFlavor
+
   /* dotnetCombined = with dotnetCorePackages; combinePackages [ sdk_3_1 sdk_2_2 sdk_3_0 sdk aspnetcore_3_1 netcore_3_1]; */
 
   # neteroworking.hostName = "nixos"; # Define your hostname.

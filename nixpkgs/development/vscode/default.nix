@@ -1,19 +1,18 @@
-{ config, lib, pkgs, autoPatchelfHook, ... }:
-
+args@{ config, pkgs, ... }:
 
 {
+  lib.packages.editor = {
+    name = "code";
+    package = config.programs.vscode.package;
+  };
+
   programs.vscode = {
+    enable = true;
+    haskell = {
       enable = true;
-      userSettings = {
-            "omnisharp.enableRoslynAnalyzers" = true;
-            "omnisharp.path" = "/home/vutaliy/.nix-profile/bin/omnisharp";
-            "workbench.colorTheme" = "Monokai Dimmed";
-            "window.zoomLevel" = 0;
-            "explorer.confirmDelete" = false;
-            "extensions.ignoreRecommendations" = false;
-            "markdown.preview.scrollEditorWithPreview" = false;
-            "debug.javascript.usePreview" = true;
-            "gitmoji.outputType" = "code";
-      };
+      hie.enable = false;
+    };
+    extensions = import ./extensions.nix args;
+    userSettings = import ./settings.nix args;
   };
 }

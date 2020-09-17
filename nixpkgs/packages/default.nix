@@ -2,7 +2,7 @@
 
 let
   sources = import ../../nix/sources.nix;
-  turbopkgs = import "${sources.nixpkgs-turbo}" { };
+  turbopkgs = import "${sources.nixpkgs-turbo}" { config = { allowUnfree = true; };  };
 in with pkgs; {
   home.packages = [
     firefox
@@ -123,9 +123,9 @@ in with pkgs; {
     /* xfce4-14.xfce4-pulseaudio-plugin */
 
     # entertainment
-    #steam
+    turbopkgs.steam
     spotify
-    #turbopkgs.discord
+    turbopkgs.discord
 
     minecraft
     zoom-us
