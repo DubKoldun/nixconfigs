@@ -115,7 +115,7 @@ in  */
       };
 
       desktopManager = {
-	plasma5.enable = true;
+	      plasma5.enable = true;
        #  xterm.enable = false;
          /* xfce4-14.enable = true; */
         # xfce = {

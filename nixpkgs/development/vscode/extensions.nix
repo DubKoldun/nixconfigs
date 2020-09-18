@@ -92,12 +92,12 @@ with vscode-extensions;
   }
 
   # kotlin
-  #{
-  #  name = "kotlin";
-  #  publisher = "fwcd";
-  #  version = "0.2.11";
-   # sha256 = "1zk5qdppcgsal9fppmpyxn58fbpan405pvv70c5cj6kqwp5crw4s";
-  #}
+  {
+   name = "kotlin";
+   publisher = "fwcd";
+   version = "0.2.11";
+   sha256 = "1zk5qdppcgsal9fppmpyxn58fbpan405pvv70c5cj6kqwp5crw4s";
+  }
   {
     name = "kotlin-formatter";
     publisher = "esafirm";

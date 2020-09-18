@@ -13,5 +13,6 @@ with config.lib; {
             "debug.javascript.usePreview" = true;
             "gitmoji.outputType" = "code";
       };
+      "github.gitAuthentication" = false;
 
 }
