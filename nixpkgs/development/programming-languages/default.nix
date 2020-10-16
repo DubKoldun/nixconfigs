@@ -1,4 +1,5 @@
- { pkgs, ... }:
+{ pkgs, ... }:
+
 {   
     home.packages = with pkgs; [    
         # languages related
@@ -8,17 +9,20 @@
         glibc
         cmake
         valgrind
+  
 
         /* haskell */
         (ghc.withPackages (ps: with ps; [
-        #  stack cabal            # builders
-        
-        # hoogle                 # Haskell API Search
+        Cabal                  # builders
+       
         microlens              # A tiny lens library with no dependencies
         unordered-containers   # containers for lab
         
         hlint
         stylish-haskell        # prettyfier
+
+        cabal2nix              # Convert Cabal files into Nix build instructions
+        cabal-install
         
         hspec hedgehog tasty   # testing
         tasty-hedgehog         # testing
@@ -33,13 +37,26 @@
         kotlin
 
         /* java */
+        maven
         gradle
 
         /* python */
-        (python38.withPackages (ps: with ps; [ virtualenv pip numpy librosa numba ]))
+        (python38.withPackages (ps: with ps; [
+             virtualenv 
+             pip        #
+             numpy      #
+             librosa    # work with audio
+             numba      #
+             pandas     # db work
+             ipykernel  # IPython Kernel for Jupyter
+             notebook   # The Jupyter HTML notebook is a web-based notebook environment for interactive computing
+             ]))
 
         /* python2 */
         /* (python2.withPackages (ps: with ps; [ pip ])) */
+
+        /* perl */
+        perl
 
         /* dotnet */
         /* mono5
