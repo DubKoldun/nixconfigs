@@ -102,6 +102,14 @@ with vscode-extensions;
     name = "kotlin-formatter";
     publisher = "esafirm";
     version = "0.0.6";
-    sha256 = "00w7d0iyr3nf5jqzwy7kk7awyh3fnljzrjbkknxmpjyjyvaa7n0z";
+    sha256 = "00w7d0iyr3nf5jqzwy7kk7awyh3fnljzrjbkknxmpjyjyvaa7n0z"; #52
   }
+
+  # python
+  # {
+  #   name = "python";
+  #   publisher = "ms-python";
+  #   version = "2020.8.109390";
+  #   sha256 = "0ccm749y0shrr45ml1ki6svjs40qf765";
+  # } 
 ]

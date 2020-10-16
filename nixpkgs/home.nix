@@ -2,7 +2,7 @@
 
 let theme = import ./theme { inherit pkgs lib; };
 in {
-  imports = [ ./packages /*./xsession*/ ./services ./programs ./development ];
+  imports = [ ./packages ./services ./programs ./development ./window-manager];
 
   home = {
     sessionVariables = {
@@ -24,10 +24,23 @@ in {
   };
 
   gtk = {
-    enable = true;
+    enable = false; # kde kekw
     iconTheme = theme.icons;
     theme = theme.gtk;
     font = theme.fonts.gtk;
+    # gtk2.extraConfig = 
+    #   ''gtk-enable-animations=1
+    #   gtk-primary-button-warps-slider=0
+    #   gtk-theme-name="Breeze"
+    #   gtk-icon-theme-name="breeze"
+    #   gtk-fallback-icon-theme="hicolor"
+    #   gtk-cursor-theme-name="breeze_cursors"
+    #   gtk-toolbar-style=GTK_TOOLBAR_BOTH_HORIZ
+    #   gtk-menu-images=1
+    #   gtk-button-images=1
+    #   '';
+
+    
   };
 
   programs = {

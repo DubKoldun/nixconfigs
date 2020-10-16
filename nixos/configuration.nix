@@ -102,17 +102,18 @@ in  */
         naturalScrolling = false;
       };
 
-      displayManager.sddm = let fetchedTheme = (import ../nix/sources.nix).sddm_theme_sugar_dark;
+      displayManager.sddm = let fetchedTheme = (import ../nix/sources.nix).sddm-chinese-painting-theme;
       in {
         enable = true;
         theme = with pkgs.lib;
-          lists.last (strings.splitString "/" (builtins.toString fetchedTheme));
+          lists.last (strings.splitString "/" (builtins.toString fetchedTheme)) + "/chinese-painting";
         extraConfig = ''
           [Theme]
           ThemeDir=${fetchedTheme}/..
           CursorTheme=Paper
         '';
       };
+
 
       desktopManager = {
 	      plasma5.enable = true;

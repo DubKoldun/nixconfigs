@@ -13,6 +13,7 @@ in {
     name = "Materia";
     package = pkgs.materia-theme;
   };
+  
 
 #  gtk = rec {
 #    name = "Materia-Custom";

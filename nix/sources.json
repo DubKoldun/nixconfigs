@@ -17,10 +17,10 @@
         "homepage": "http://zdharma.org",
         "owner": "zdharma",
         "repo": "fast-syntax-highlighting",
-        "rev": "9f1087f3b452f1336ecb65f54e1e7ae13039e11b",
-        "sha256": "1amsx34zkl0g0fip8ggig4s3v2mph1x55ffa4rd9pqr2966d2vc3",
+        "rev": "a47b5088636c3678c7baa22710d10b0c45bc9265",
+        "sha256": "00d6nssh73k26w69fdp8iff1xghyr8ziy5w5a2li0z9lvm6j0nik",
         "type": "tarball",
-        "url": "https://github.com/zdharma/fast-syntax-highlighting/archive/9f1087f3b452f1336ecb65f54e1e7ae13039e11b.tar.gz",
+        "url": "https://github.com/zdharma/fast-syntax-highlighting/archive/a47b5088636c3678c7baa22710d10b0c45bc9265.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "home-manager": {
@@ -29,10 +29,10 @@
         "homepage": "",
         "owner": "rycee",
         "repo": "home-manager",
-        "rev": "249650a07ee2d949fa599f3177a8c234adbd1bee",
-        "sha256": "0x858b7i15kx74aqwgi2n5ls7zjhcky95z9vbxfdlawmaz371dma",
+        "rev": "e7d5531cfa770afc591f8dc5542eb4fba9962885",
+        "sha256": "0gx4pl4hfl08kswalzqbbrzcgpjzkd84h7r4nvvf5hkkhflx5ng5",
         "type": "tarball",
-        "url": "https://github.com/rycee/home-manager/archive/249650a07ee2d949fa599f3177a8c234adbd1bee.tar.gz",
+        "url": "https://github.com/rycee/home-manager/archive/e7d5531cfa770afc591f8dc5542eb4fba9962885.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "niv": {
@@ -41,10 +41,10 @@
         "homepage": "https://github.com/nmattia/niv",
         "owner": "nmattia",
         "repo": "niv",
-        "rev": "f73bf8d584148677b01859677a63191c31911eae",
-        "sha256": "0jlmrx633jvqrqlyhlzpvdrnim128gc81q5psz2lpp2af8p8q9qs",
+        "rev": "9d35b9e4837ab88517210b1701127612c260eccf",
+        "sha256": "0q50xhnm8g2yfyakrh0nly4swyygxpi0a8cb9gp65wcakcgvzvdh",
         "type": "tarball",
-        "url": "https://github.com/nmattia/niv/archive/f73bf8d584148677b01859677a63191c31911eae.tar.gz",
+        "url": "https://github.com/nmattia/niv/archive/9d35b9e4837ab88517210b1701127612c260eccf.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs": {
@@ -53,10 +53,10 @@
         "homepage": "https://github.com/NixOS/nixpkgs",
         "owner": "NixOS",
         "repo": "nixpkgs-channels",
-        "rev": "61525137fd1002f6f2a5eb0ea27d480713362cd5",
-        "sha256": "1gzwz9jvfcf0is6zma7qlgszkngfb2aa4kam0nhs0qnwb4nqn7mg",
+        "rev": "84d74ae9c9cbed73274b8e4e00be14688ffc93fe",
+        "sha256": "0ww70kl08rpcsxb9xdx8m48vz41dpss4hh3vvsmswll35l158x0v",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs-channels/archive/61525137fd1002f6f2a5eb0ea27d480713362cd5.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs-channels/archive/84d74ae9c9cbed73274b8e4e00be14688ffc93fe.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
         "version": "8ba41a1e14961fe43523f29b8b39acb569b70e72"
     },
@@ -66,10 +66,10 @@
         "homepage": null,
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "1bdad26c20b294bb2d953ae3c8290e93b97a516b",
-        "sha256": "02mvpn6v4k3n7k88d3iqg8a5yzpi3l2xpca605nw5v05j6h1frrm",
+        "rev": "84420802f428daf5d322b7a45e3efc766a703a89",
+        "sha256": "0ch6nrqqp66gih46pw04kijw0j5pxf31ldqzdixzzgk0lw3d3faz",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs/archive/1bdad26c20b294bb2d953ae3c8290e93b97a516b.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs/archive/84420802f428daf5d322b7a45e3efc766a703a89.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nord-dircolors": {
@@ -102,10 +102,10 @@
         "homepage": null,
         "owner": "DubKoldun",
         "repo": "sddm_theme_sugar_dark",
-        "rev": "d6ff456b93e3174237d6b943f4138610284785c9",
-        "sha256": "02kg868pphqpwi030dh2mdsvz6b8169232axd4phpclhflxlz7ah",
+        "rev": "aeffce02e7a6bc58f3c4b3db78bf371c94ff3ace",
+        "sha256": "0qp1nxxxq0qmgximqp337lvnkkaz7h1mi9z0izkj2b2ayflzz9jd",
         "type": "tarball",
-        "url": "https://github.com/DubKoldun/sddm_theme_sugar_dark/archive/d6ff456b93e3174237d6b943f4138610284785c9.tar.gz",
+        "url": "https://github.com/DubKoldun/sddm_theme_sugar_dark/archive/aeffce02e7a6bc58f3c4b3db78bf371c94ff3ace.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }

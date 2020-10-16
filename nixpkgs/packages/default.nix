@@ -28,15 +28,7 @@ in with pkgs; {
     # editor
     typora
 
-    # Unity
-    /* unity3d
-    unityhub */
-
-    #jb
-    jetbrains.jdk
-    jetbrains.idea-community
-
-    # terminal env
+    # terminal
     kitty
 
     # terminal helpful
@@ -45,54 +37,55 @@ in with pkgs; {
     drive  # google drive control from terminal
     psmisc # small useful utilities (such as fuser, killall and pstree)
 
-    # graphic libs
+    # graphical libs
     libpng       # The official reference implementation for the PNG file format with animation patch
     opencv       # Open Computer Vision Library
-    leptonica    # inmage processing and analysis library
+    leptonica    # image processing and analysis library
     tesseract4   # ocr (optical character recognition)
 
-    # frameworks
-    # TODO Qt
-
-    # messaging
+    # communication apps
+    discord
     slack
     tdesktop
+    zoom-us
 
     # pictures
     gimp
-    grim  # screenshot
-    slurp # crop screen
+    feh
+    imagemagick    # tool for convert (pdf -> image)
+    viewnior
     wl-clipboard
-    imagemagick  # tool for convert (pdf -> image)
+    flameshot
 
     # document related
-    feh
     evince
     # wpsoffice
+    libreoffice
     # pandoc
     # texlive.combined.scheme-medium
 
     # archive management
-    zip   # package and compress (archive) files
     atool # archive command line helper
-    unzip # zip format extraction
-    unrar # utility for rar archives
     p7zip # 7z pack extraction
+    unrar # utility for rar archives
+    unzip # zip format extraction
+    zip   # package and compress (archive) files
 
     # media
     mpv            # a media player
     audacity
     ffmpeg_4
     playerctl      # controlling media players
-    # obs-studio     # recording and stream
+    obs-studio     # recording and stream
     pavucontrol    # PulseAudio Volume Control
     pulseeffects   # limiter, compressor, reverberation, equalizer and auto volume effects
     (speechd.override { withPulse = true; })
 
+    haskellPackages.xmonad-screenshot
+
     # NixOS house keeping
     niv          # easy fetch for nix
     nox          # tools to make nix nicer to use
-    # vulnix       # NixOS vulnerability scanner
     pkg-config   # A tool that allows packages to find out information about other packages
 
     # server
@@ -102,7 +95,6 @@ in with pkgs; {
 
     # data base
     pgcli
-    # pgadmin
     postgresql
 
     # other
@@ -123,12 +115,11 @@ in with pkgs; {
     /* xfce4-14.xfce4-pulseaudio-plugin */
 
     # entertainment
-    turbopkgs.steam
+    steam
     spotify
-    turbopkgs.discord
-
     minecraft
-    zoom-us
+    qbittorrent
+    megasync
 
   ];
 }
