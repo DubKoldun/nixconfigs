@@ -17,10 +17,10 @@
         "homepage": "http://zdharma.org",
         "owner": "zdharma",
         "repo": "fast-syntax-highlighting",
-        "rev": "a47b5088636c3678c7baa22710d10b0c45bc9265",
-        "sha256": "00d6nssh73k26w69fdp8iff1xghyr8ziy5w5a2li0z9lvm6j0nik",
+        "rev": "be2f385453670c18c40320a7384333f98fcd9f79",
+        "sha256": "1jjhv2ag1rnj1ayrwag5mxyjbdmmf5h5yxvmlc1i44pjcqz3w4s9",
         "type": "tarball",
-        "url": "https://github.com/zdharma/fast-syntax-highlighting/archive/a47b5088636c3678c7baa22710d10b0c45bc9265.tar.gz",
+        "url": "https://github.com/zdharma/fast-syntax-highlighting/archive/be2f385453670c18c40320a7384333f98fcd9f79.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "home-manager": {
@@ -29,10 +29,10 @@
         "homepage": "",
         "owner": "rycee",
         "repo": "home-manager",
-        "rev": "e7d5531cfa770afc591f8dc5542eb4fba9962885",
-        "sha256": "0gx4pl4hfl08kswalzqbbrzcgpjzkd84h7r4nvvf5hkkhflx5ng5",
+        "rev": "bcbf09a2021712a501681fa984f659fddad3c2e8",
+        "sha256": "0ih2rp30ldvf4klpiphc1civ5f18flc1a541lw81y23nhrgny55a",
         "type": "tarball",
-        "url": "https://github.com/rycee/home-manager/archive/e7d5531cfa770afc591f8dc5542eb4fba9962885.tar.gz",
+        "url": "https://github.com/rycee/home-manager/archive/bcbf09a2021712a501681fa984f659fddad3c2e8.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "niv": {
@@ -41,10 +41,10 @@
         "homepage": "https://github.com/nmattia/niv",
         "owner": "nmattia",
         "repo": "niv",
-        "rev": "9d35b9e4837ab88517210b1701127612c260eccf",
-        "sha256": "0q50xhnm8g2yfyakrh0nly4swyygxpi0a8cb9gp65wcakcgvzvdh",
+        "rev": "ba57d5a29b4e0f2085917010380ef3ddc3cf380f",
+        "sha256": "1kpsvc53x821cmjg1khvp1nz7906gczq8mp83664cr15h94sh8i4",
         "type": "tarball",
-        "url": "https://github.com/nmattia/niv/archive/9d35b9e4837ab88517210b1701127612c260eccf.tar.gz",
+        "url": "https://github.com/nmattia/niv/archive/ba57d5a29b4e0f2085917010380ef3ddc3cf380f.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs": {
@@ -66,10 +66,10 @@
         "homepage": null,
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "84420802f428daf5d322b7a45e3efc766a703a89",
-        "sha256": "0ch6nrqqp66gih46pw04kijw0j5pxf31ldqzdixzzgk0lw3d3faz",
+        "rev": "4c59687c01f2c7bcb27fcb2c0da8d482208fb4be",
+        "sha256": "1h04ik0gj5smc2rxmx2zpxh1c6g6jq9cy51sx4wjgg7kb7r3r717",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs/archive/84420802f428daf5d322b7a45e3efc766a703a89.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs/archive/4c59687c01f2c7bcb27fcb2c0da8d482208fb4be.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nord-dircolors": {
@@ -78,10 +78,10 @@
         "homepage": "https://www.nordtheme.com/ports/dircolors",
         "owner": "arcticicestudio",
         "repo": "nord-dircolors",
-        "rev": "addb3b427e008d23affc721450fde86f27566f1d",
-        "sha256": "0s7bd38269z4b9j6f90nscjkbdbh23z3mlg89fnk7ndyrpf5dqlj",
+        "rev": "35166d328992213194d7d02cd034e39da962f19e",
+        "sha256": "1kg0xabg1wz61z1f23i4b5yzfhm5s4dv554bqb19d4by3pay23g8",
         "type": "tarball",
-        "url": "https://github.com/arcticicestudio/nord-dircolors/archive/addb3b427e008d23affc721450fde86f27566f1d.tar.gz",
+        "url": "https://github.com/arcticicestudio/nord-dircolors/archive/35166d328992213194d7d02cd034e39da962f19e.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "sddm-chinese-painting-theme": {
@@ -90,10 +90,10 @@
         "homepage": "",
         "owner": "fralonra",
         "repo": "sddm-chinese-painting-theme",
-        "rev": "c7b22162d8589b5b140da4098b29b816d692a4aa",
-        "sha256": "0lxzjl410p0g76mzjwhgmayf62zgg5p937f4f0mlsnmxzb2c510c",
+        "rev": "26b78cae632c7416378b454be836b82e1adbddd0",
+        "sha256": "0d90pdbnx76y9dckszal6phsg48b7pn70r97jz6ikyszdljk2p7a",
         "type": "tarball",
-        "url": "https://github.com/fralonra/sddm-chinese-painting-theme/archive/c7b22162d8589b5b140da4098b29b816d692a4aa.tar.gz",
+        "url": "https://github.com/fralonra/sddm-chinese-painting-theme/archive/26b78cae632c7416378b454be836b82e1adbddd0.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "sddm_theme_sugar_dark": {
