@@ -37,6 +37,7 @@
         kotlin
 
         /* java */
+        # openjdk
         maven
         gradle
 
@@ -50,6 +51,15 @@
              pandas     # db work
              ipykernel  # IPython Kernel for Jupyter
              notebook   # The Jupyter HTML notebook is a web-based notebook environment for interactive computing
+             jupyter_client
+             pyzmq
+             pytorch
+             torchvision
+             Keras
+             tensorflow-estimator
+             seaborn
+            #  xgboost
+             pybindgen
              ]))
 
         /* python2 */
