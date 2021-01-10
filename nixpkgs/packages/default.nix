@@ -3,7 +3,7 @@
 let
   sources = import ../../nix/sources.nix;
   turbopkgs = import "${sources.nixpkgs-turbo}" { config = { allowUnfree = true; };  };
-in with pkgs; {
+in with pkgs; with xorg; {
   home.packages = [
     firefox
     google-chrome
@@ -44,7 +44,7 @@ in with pkgs; {
     tesseract4   # ocr (optical character recognition)
 
     # communication apps
-    discord
+    turbopkgs.discord
     slack
     tdesktop
     zoom-us
@@ -98,17 +98,18 @@ in with pkgs; {
     postgresql
 
     # other
-    gvfs                    #
-    etcher
-    gnupg                   # the GNU Privacy Guard suite of programs
-    light                   # brightness
-    gnutls                  # the GNU Transport Layer Security Library - software implementation of the TLS, SSL and DTLS protocols
     blueman                 # bluetooth
+    etcher
     gnome3.dconf            # FIXING bugs, wtf, idk
+    gnutls                  # the GNU Transport Layer Security Library - software implementation of the TLS, SSL and DTLS protocols
+    gnupg                   # the GNU Privacy Guard suite of programs
+    gvfs                    #
     shared-mime-info        # a database of common MIME types
+    light                   # brightness
+    udev
 
     # xfce
-    xorg.xbacklight
+    xbacklight
     xfce4-14.xfce4-appfinder
     xfce4-14.xfce4-power-manager
     /* xfce4-14.xfce4-battery-plugin */
@@ -120,6 +121,25 @@ in with pkgs; {
     minecraft
     qbittorrent
     megasync
+
+    jetbrains.idea-community
+    jetbrains.jdk
+
+    # libs for compatibility with windows
+
+    libpulseaudio
+    
+    libX11
+    libXext
+    libXcursor
+    libXinerama
+    libXi
+    libXrandr
+    libXxf86vm
+    egl-wayland
+    wayland
+    wayland-utils
+    libxkbcommon
 
   ];
 }
