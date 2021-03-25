@@ -9,7 +9,6 @@
         glibc
         cmake
         valgrind
-  
 
         /* haskell */
         (ghc.withPackages (ps: with ps; [
@@ -38,8 +37,10 @@
 
         /* java */
         # openjdk
+        jetbrains.jdk
         maven
         gradle
+        antlr4
 
         /* python */
         (python38.withPackages (ps: with ps; [
@@ -69,10 +70,14 @@
         perl
 
         /* dotnet */
-        /* mono5
+        # mono5
+        msbuild
         dotnet-sdk_3
         omnisharp-roslyn
         dotnetCorePackages.netcore_3_1
-        dotnetCorePackages.aspnetcore_3_1 */
+        dotnetCorePackages.aspnetcore_3_1
+
+        /* utils */
+        graphviz
     ];
 }

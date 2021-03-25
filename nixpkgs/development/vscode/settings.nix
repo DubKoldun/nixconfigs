@@ -2,20 +2,29 @@
 
 with config.lib; {
  
-  userSettings = {
-            "omnisharp.enableRoslynAnalyzers" = true;
-            "omnisharp.path" = "/home/vutaliy/.nix-profile/bin/omnisharp";
-            "workbench.colorTheme" = "Monokai Dimmed";
-            "window.zoomLevel" = 0;
-            "explorer.confirmDelete" = false;
-            "extensions.ignoreRecommendations" = false;
-            "markdown.preview.scrollEditorWithPreview" = false;
-            "debug.javascript.usePreview" = true;
-            "gitmoji.outputType" = "code";
-            "editor.tabSize" = 2;
-      };
+  # "userSettings" = {
+  #           "omnisharp.enableRoslynAnalyzers" = true;
+  #           "omnisharp.path" = "/home/vutaliy/.nix-profile/bin/omnisharp";
+  #           "workbench.colorTheme" = "Monokai Dimmed";
+  #           "window.zoomLevel" = 0;
+  #           "explorer.confirmDelete" = false;
+  #           "extensions.ignoreRecommendations" = false;
+  #           "markdown.preview.scrollEditorWithPreview" = false;
+  #           "debug.javascript.usePreview" = true;
+  #           "gitmoji.outputType" = "code";
+  #           "editor.tabSize" = 2;
+  # };
+
+  "antlr4.generation" = {
+    "visitors" = true;
+  };
 
   "github.gitAuthentication" = false;
+  "workbench.colorTheme" = "Visual Studio 2019 Dark";
+  "omnisharp.path" = "/home/vutaliy/.nix-profile/bin/omnisharp";
+  "omnisharp.useGlobalMono" = "never";
+
+
   
   "ghcSimple.startupCommands.all" = [
     "System.IO.hSetBuffering System.IO.stderr System.IO.NoBuffering"
@@ -27,5 +36,6 @@ with config.lib; {
     ":set -fno-hide-source-paths"
     ":set -Wno-error=missing-home-modules"
     ];
+
 
 }

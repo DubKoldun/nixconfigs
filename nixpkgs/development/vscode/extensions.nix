@@ -112,4 +112,12 @@ with vscode-extensions;
   #   version = "2020.8.109390";
   #   sha256 = "0ccm749y0shrr45ml1ki6svjs40qf765";
   # } 
+
+  # cpp
+  {
+    name = "cpptools";
+    publisher = "ms-vscode";
+    version = "1.2.2";
+    sha256 = "0a481rvcn0ikzxilaxfy7mmazf07g8b7dki0adqby6iqrygiskw1";
+  }
 ]
