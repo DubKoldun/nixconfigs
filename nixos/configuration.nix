@@ -65,7 +65,7 @@ in  */
   };
   environment.systemPackages = with pkgs; [
     pkgs.qt5.qtgraphicaleffects pkgs.qt5.qtmultimedia
-    (steam.override { extraPkgs = pkgs: [ mono gtk3 gtk3-x11 libgdiplus zlib ]; nativeOnly = true; }).run
+    (steam.override { extraPkgs = pkgs: [ mono gtk3 gtk3-x11 libgdiplus zlib]; nativeOnly = true; }).run
     ];
 
   services = {

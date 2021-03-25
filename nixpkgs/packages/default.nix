@@ -24,6 +24,12 @@ in with pkgs; with xorg; {
     xclip      # clipboard manipulations
     gnumake    # control the generation of non-source files from sources
     binutils   # tools for manipulating binaries (linker, assembler, etc.)
+    gnome3.gnome-keyring
+    libgnome-keyring
+    # xdg_utils  # A set of command line tools that assist applications with a variety of desktop integration tasks
+    # turbopkgs.xdg-utils
+    # turbopkgs.newsboat
+
 
     # editor
     typora
@@ -45,6 +51,7 @@ in with pkgs; with xorg; {
 
     # communication apps
     turbopkgs.discord
+    skype
     slack
     tdesktop
     zoom-us
@@ -52,9 +59,9 @@ in with pkgs; with xorg; {
     # pictures
     gimp
     feh
-    imagemagick    # tool for convert (pdf -> image)
-    viewnior
-    wl-clipboard
+    # imagemagick    # tool for convert (pdf -> image)
+    # viewnior
+    # wl-clipboard
     flameshot
 
     # document related
@@ -110,8 +117,8 @@ in with pkgs; with xorg; {
 
     # xfce
     xbacklight
-    xfce4-14.xfce4-appfinder
-    xfce4-14.xfce4-power-manager
+    # xfce4-14.xfce4-appfinder
+    # xfce4-14.xfce4-power-manager
     /* xfce4-14.xfce4-battery-plugin */
     /* xfce4-14.xfce4-pulseaudio-plugin */
 
@@ -123,23 +130,22 @@ in with pkgs; with xorg; {
     megasync
 
     jetbrains.idea-community
-    jetbrains.jdk
+    # jetbrains.jdk
 
-    # libs for compatibility with windows
-
-    libpulseaudio
-    
-    libX11
-    libXext
-    libXcursor
-    libXinerama
-    libXi
-    libXrandr
-    libXxf86vm
-    egl-wayland
-    wayland
-    wayland-utils
-    libxkbcommon
+    # libs for compatibility with windows apps
+    # libpulseaudio
+    # libX11
+    # libXext
+    # libXcursor
+    # libXinerama
+    # libXi
+    # libXrandr
+    # libXxf86vm
+    # egl-wayland
+    # wayland
+    # wayland-utils
+    # libxkbcommon
+    # libstdcxx5
 
   ];
 }
